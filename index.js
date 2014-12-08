@@ -48,9 +48,6 @@ var remote = Remote({
 
 player.on('connect', function () {
 	console.log('client connected');
-});
-player.on('ready', function () {
-	console.log('client ready');
 	player.on('song', function (song) {
 		console.log('Now playing', song.title);
 		
@@ -118,6 +115,9 @@ player.on('ready', function () {
 	player.on('stop', function () {
 		remote.playbackStatus = 'Stopped';
 	});
+	player.on('volume', function (value) {
+		remote.volume = value / 100;
+	});
 
 	remote.on('raise', function () { /* TODO */ });
 	remote.on('quit', function () {
@@ -147,7 +147,7 @@ player.on('ready', function () {
 	});
 	remote.on('position', function () { /* TODO */ });
 	remote.on('open', function () { /* TODO */ });
-	remote.on('volume', function (value) { /* TODO */ });
+	remote.on('volume', function (value) { /* TODO (value is between 0 and 1) */ });
 });
 player.on('disconnect', function (data) {
 	console.log('client disconnecting', data);
