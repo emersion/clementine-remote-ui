@@ -1,0 +1,33 @@
+{
+  "name": "clementine-remote-ui",
+  "version": "1.0.0",
+  "description": "A Clementine remote UI with MPRIS support, powered by Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": " "
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emersion/clementine-remote-ui.git"
+  },
+  "keywords": [
+    "clementine",
+    "remote",
+    "music",
+    "player",
+    "ui",
+    "mpris",
+    "client"
+  ],
+  "author": "emersion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emersion/clementine-remote-ui/issues"
+  },
+  "homepage": "https://github.com/emersion/clementine-remote-ui",
+  "dependencies": {
+    "clementine-remote": "^0.1.0",
+    "mpris-service": "^1.0.0",
+    "tmp": "0.0.24"
+  }
+}
